@@ -1,0 +1,65 @@
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: Roboto, sans-serif;
+}
+
+body header h1 {
+  font-family: Shrikhand, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 10px 0;
+}
+
+body header .position_bar {
+  position: relative;
+  background-color: #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .position_bar .fa-map-marker-alt {
+  position: absolute;
+  left: 100px;
+}
+
+body header .reservation_btn {
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+body header .reservation_btn h2, body header .reservation_btn p {
+  text-align: center;
+}
+
+body header .reservation_btn button {
+  background-color: #FF79DA;
+}
+/*# sourceMappingURL=style.css.map */
