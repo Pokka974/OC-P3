@@ -18,7 +18,6 @@ body a :active {
 }
 
 body header {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,11 +57,157 @@ body header .fa-arrow-left {
 
 body main figure {
   margin: 0;
+  max-height: 283px;
 }
 
 body main figure img {
-  width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 288px;
+}
+
+body main .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  max-width: 1440px;
+  width: 95.4%;
+  top: 20rem;
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1rem;
+}
+
+body main .menu .main-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+body main .menu .main-head h2 {
+  font-family: Shrikhand, sans-serif;
+}
+
+body main .menu .main-head .fa-heart {
+  font-size: 1.5rem;
+}
+
+body main .menu span {
+  border-bottom: 2px solid #99E2D0;
+}
+
+body main .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+body main .menu ul li {
+  width: 100%;
+}
+
+body main .menu ul .card_plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+body main .menu button {
+  width: 30%;
+  background: #9356dc;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  cursor: pointer;
+  border: none;
+  border-radius: 2rem;
+  height: 3rem;
+  padding: 1rem;
+  color: #fff;
+  -webkit-box-shadow: 1px 2px 5px #6d6b6b;
+          box-shadow: 1px 2px 5px #6d6b6b;
+  margin: 1rem 0 1.5rem 0;
+}
+
+body footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 2rem;
+}
+
+body footer h2 {
+  font-family: Shrikhand, sans-serif;
+}
+
+body footer a {
+  color: #fff;
+}
+
+body footer a li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.2rem;
+  gap: 1rem;
 }
 /*# sourceMappingURL=restaurant_pages.css.map */
