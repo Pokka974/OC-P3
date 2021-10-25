@@ -15,12 +15,30 @@ body{
         }
     }
     header{
+        width: 100vw;
+        @include flex;
         h1{
             font-family: $font_head;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 20px 0 10px 0;
+            margin: 0;
+            padding: 1rem 0;
+        }
+        .fa-arrow-left{
+            position: absolute;
+            font-size: 1.5rem;
+            top: 1.5rem;
+            left: 2rem;
+        }
+    }
+    main{
+        figure{
+            margin: 0;
+            img{
+                width: 100vw;
+                object-fit: cover;
+            }
         }
     }
 }

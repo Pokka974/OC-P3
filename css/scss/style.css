@@ -28,7 +28,7 @@ body header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px 0 10px 0;
+  margin: 1rem 0;
 }
 
 body .position_bar {
