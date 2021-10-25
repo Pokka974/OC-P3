@@ -1,35 +1,4 @@
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
-$lightgrey:#f6f6f6;
-
-$font_head: Shrikhand, sans-serif;
-$text_font: Roboto, sans-serif;
-
-$breakpoints: (
-    "phone":        400px,
-    "phablet":      560px,
-    "tablet":       768px,
-    "desktop":      1248px,
-);
-@mixin mq($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-        @if $type == max {
-            $width: $width - 1px;
-        }
-        @media only screen and (#{$type}-width: $width) {
-            @content;
-        }
-    }
-}
-
-@mixin flex($direction: row, $justify: center, $align: center){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
+@import "standard";
 
 body{
     max-width: 1440px;
@@ -53,35 +22,35 @@ body{
             justify-content: center;
             margin: 20px 0 10px 0;
         }
-        .position_bar{
-            @include flex();
-            height: 3rem;
-            box-shadow: 0px 2px 2px 0px #cecbcb inset;
-            background-color: #eaeaea;
-            .fa-map-marker-alt{
-                margin-right: 0.5rem;
-            }
+    }
+    .position_bar{
+        @include flex();
+        height: 3rem;
+        box-shadow: 0px 2px 2px 0px #cecbcb inset;
+        background-color: #eaeaea;
+        .fa-map-marker-alt{
+            margin-right: 0.5rem;
         }
-        .reservation_btn{
-            @include flex(column);
-            padding: 30px;
-            background-color: $lightgrey;
-            
-            h2, p{
-                text-align: center;
-            }
-            button{
-                background: rgb(147,86,220);
-                background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-                cursor: pointer;
-                border: none;
-                border-radius: 2rem;
-                height: 3rem;
-                padding: 1rem;
-                color: #fff;
-                box-shadow: 1px 2px 5px #6d6b6b;
-                margin: 1rem 0 1.5rem 0;
-            }
+    }
+    .reservation_btn{
+        @include flex(column);
+        padding: 30px;
+        background-color: $lightgrey;
+        
+        h2, p{
+            text-align: center;
+        }
+        button{
+            background: rgb(147,86,220);
+            background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+            cursor: pointer;
+            border: none;
+            border-radius: 2rem;
+            height: 3rem;
+            padding: 1rem;
+            color: #fff;
+            box-shadow: 1px 2px 5px #6d6b6b;
+            margin: 1rem 0 1.5rem 0;
         }
     }
     nav{

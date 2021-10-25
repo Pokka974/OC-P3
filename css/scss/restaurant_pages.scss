@@ -1,0 +1,26 @@
+@import "standard";
+
+body{
+    max-width: 1440px;
+    font-family: $text_font;
+    ul{
+        list-style: none;
+        padding: 0;
+    } 
+    a{
+        text-decoration: none;
+        :active{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    header{
+        h1{
+            font-family: $font_head;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0 10px 0;
+        }
+    }
+}

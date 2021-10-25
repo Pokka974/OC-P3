@@ -31,7 +31,7 @@ body header h1 {
   margin: 20px 0 10px 0;
 }
 
-body header .position_bar {
+body .position_bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,11 +51,11 @@ body header .position_bar {
   background-color: #eaeaea;
 }
 
-body header .position_bar .fa-map-marker-alt {
+body .position_bar .fa-map-marker-alt {
   margin-right: 0.5rem;
 }
 
-body header .reservation_btn {
+body .reservation_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,11 +73,11 @@ body header .reservation_btn {
   background-color: #f6f6f6;
 }
 
-body header .reservation_btn h2, body header .reservation_btn p {
+body .reservation_btn h2, body .reservation_btn p {
   text-align: center;
 }
 
-body header .reservation_btn button {
+body .reservation_btn button {
   background: #9356dc;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
