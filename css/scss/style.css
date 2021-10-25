@@ -184,7 +184,12 @@ body main {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  width: 90vw;
+}
+
+@media only screen and (min-width: 1248px) {
+  body main {
+    max-width: 1440px;
+  }
 }
 
 body main h2 {
@@ -210,6 +215,12 @@ body main .card {
           align-items: flex-start;
   background-color: #fff;
   border-radius: 1rem;
+}
+
+@media only screen and (min-width: 1248px) {
+  body main .card {
+    max-width: 1400px;
+  }
 }
 
 body main .card .isNotNew {
@@ -238,6 +249,12 @@ body main .card figure img {
   border-radius: 1rem 1rem 0 0;
 }
 
+@media only screen and (min-width: 1248px) {
+  body main .card figure img {
+    max-width: 1400px;
+  }
+}
+
 body main .card .card-description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,6 +271,12 @@ body main .card .card-description {
           align-items: center;
   width: 80vw;
   padding: 0.8rem;
+}
+
+@media only screen and (min-width: 1248px) {
+  body main .card .card-description {
+    max-width: 1350px;
+  }
 }
 
 body main .card .card-description .card-text {
