@@ -46,7 +46,7 @@ body{
         text-decoration: none;
         :active{
             text-decoration: none;
-            color: initial;
+            color: inherit;
         }
     }
     header{
@@ -69,14 +69,15 @@ body{
         .reservation_btn{
             @include flex(column);
             padding: 30px;
-            background-color: $lightgrey
-            ;
+            background-color: $lightgrey;
+            
             h2, p{
                 text-align: center;
             }
             button{
                 background: rgb(147,86,220);
                 background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+                cursor: pointer;
                 border: none;
                 border-radius: 2rem;
                 height: 3rem;

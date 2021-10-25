@@ -14,7 +14,7 @@ body a {
 
 body a :active {
   text-decoration: none;
-  color: initial;
+  color: inherit;
 }
 
 body header h1 {
@@ -81,6 +81,7 @@ body header .reservation_btn button {
   background: #9356dc;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  cursor: pointer;
   border: none;
   border-radius: 2rem;
   height: 3rem;
