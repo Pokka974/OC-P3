@@ -52,8 +52,9 @@ body{
             color: #fff;
             box-shadow: 2px 4px 10px #6d6b6b;
             margin: 1rem 0 1.5rem 0;
+            transition: transform 200ms;
             &:hover{
-                padding: 1.5rem;
+                transform: scale(1.15);
                 box-shadow: 3px 6px 10px #6d6b6b;
             }
         }

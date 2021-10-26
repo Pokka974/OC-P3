@@ -103,10 +103,15 @@ body .reservation_btn button {
   -webkit-box-shadow: 2px 4px 10px #6d6b6b;
           box-shadow: 2px 4px 10px #6d6b6b;
   margin: 1rem 0 1.5rem 0;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 body .reservation_btn button:hover {
-  padding: 1.5rem;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   -webkit-box-shadow: 3px 6px 10px #6d6b6b;
           box-shadow: 3px 6px 10px #6d6b6b;
 }
