@@ -17,6 +17,7 @@ body{
     header{
         @include flex;
         max-width: 1440px;
+        position: relative;
        .first{
             position: absolute;
             left: 2rem;
