@@ -31,39 +31,32 @@ body header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1440px;
+}
+
+body header .first {
+  position: absolute;
+  left: 2rem;
+}
+
+body header .first .fa-arrow-left {
+  font-size: 1.5rem;
 }
 
 body header h1 {
   font-family: Shrikhand, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0;
   padding: 1rem 0;
 }
 
-body header .fa-arrow-left {
+body main img {
   position: absolute;
-  font-size: 1.5rem;
-  top: 1.5rem;
-  left: 2rem;
-}
-
-body main figure {
-  margin: 0;
-  max-height: 283px;
-}
-
-body main figure img {
+  top: 68px;
+  z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  max-width: 1440px;
   height: 288px;
 }
 
@@ -81,13 +74,13 @@ body main .menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
   max-width: 1440px;
-  width: 95.4%;
+  width: calc(100% - 2rem);
   top: 20rem;
   background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
   padding: 1rem;
+  margin-top: 250px;
 }
 
 body main .menu .main-head {
@@ -110,6 +103,7 @@ body main .menu .main-head {
 
 body main .menu .main-head h2 {
   font-family: Shrikhand, sans-serif;
+  font-size: 300;
 }
 
 body main .menu .main-head .fa-heart {
@@ -181,19 +175,38 @@ body main .menu button {
 
 body footer {
   background-color: #353535;
-  color: #fff;
   padding: 2rem;
 }
 
 body footer h2 {
   font-family: Shrikhand, sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
-body footer a {
+body footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5rem;
+}
+
+body footer ul a {
   color: #fff;
 }
 
-body footer a li {
+body footer ul a li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

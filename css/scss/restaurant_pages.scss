@@ -16,46 +16,46 @@ body{
     }
     header{
         @include flex;
+        max-width: 1440px;
+       .first{
+            position: absolute;
+            left: 2rem;
+            .fa-arrow-left{
+                font-size: 1.5rem;
+            }
+        }
         h1{
             font-family: $font_head;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin: 0;
             padding: 1rem 0;
         }
-        .fa-arrow-left{
-            position: absolute;
-            font-size: 1.5rem;
-            top: 1.5rem;
-            left: 2rem;
-        }
     }
     main{
-        figure{
-            margin: 0;
-            max-height: 283px;
-            img{
-                object-fit: cover;
-                width: 100%;
-                height: 288px;
-            }
+        img{
+            position: absolute;
+            top: 68px;
+            z-index: -1;
+            object-fit: cover;
+            width: 100%;
+            max-width: 1440px;
+            height: 288px;
         }
         .menu{
             @include flex(column, initial, center);
-            position: absolute;
             max-width: 1440px;
-            width:95.4%;
+            width: calc(100% - 2rem);
             top: 20rem;
             background-color: $lightgrey;
             border-radius: 2rem 2rem 0 0;
             padding: 1rem;
+            margin-top: 250px;
             .main-head{
                 @include flex(row, space-evenly);
                 padding: 1rem 0;
                 gap: 2rem;
                 h2{
                     font-family: $font_head;
+                    font-size: 300;
                 }
                 .fa-heart{
                     font-size: 1.5rem;
@@ -97,18 +97,25 @@ body{
     }
     footer{
         background-color: #353535;
-        color: #fff;
         padding: 2rem;
         h2{
             font-family: $font_head;
-        }
-        a{
             color: #fff;
-            li{
-                @include flex(row, flex-start, center);
-                margin-top: 0.2rem;
-                gap: 1rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        ul{
+            @include flex(column, center, flex-start);
+            gap: 0.5rem;
+            a{
+                color: #fff;
+                li{
+                    @include flex(row, flex-start, center);
+                    margin-top: 0.2rem;
+                    gap: 1rem;
+                }
             }
         }
+        
     }
 }
