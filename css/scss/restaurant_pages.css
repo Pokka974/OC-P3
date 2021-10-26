@@ -99,7 +99,7 @@ body main .menu .main-head {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 0;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 body main .menu .main-head h2 {
@@ -156,10 +156,12 @@ body main .menu ul .card_plat {
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
+  -webkit-box-shadow: 1px 1px 10px #b3b1b1;
+          box-shadow: 1px 1px 10px #b3b1b1;
 }
 
 body main .menu button {
-  width: 30%;
+  width: 15rem;
   background: #9356dc;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);

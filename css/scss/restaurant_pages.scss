@@ -53,7 +53,7 @@ body{
             .main-head{
                 @include flex(row, space-evenly);
                 padding: 1rem 0;
-                gap: 2rem;
+                gap: 5rem;
                 h2{
                     font-family: $font_head;
                     font-size: 300;
@@ -79,10 +79,11 @@ body{
                     background-color: #fff;
                     border-radius: 1rem;
                     padding: 1rem;
+                    box-shadow: 1px 1px 10px #b3b1b1;
                 }
             }
             button{
-                width: 30%;
+                width: 15rem;
                 background: rgb(147,86,220);
                 background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
                 cursor: pointer;
@@ -117,6 +118,5 @@ body{
                 }
             }
         }
-        
     }
 }
