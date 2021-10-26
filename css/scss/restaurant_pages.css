@@ -156,8 +156,8 @@ body main .menu ul .card_plat {
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
-  -webkit-box-shadow: 1px 1px 10px #b3b1b1;
-          box-shadow: 1px 1px 10px #b3b1b1;
+  -webkit-box-shadow: 1px 1px 10px #cecaca;
+          box-shadow: 1px 1px 10px #cecaca;
 }
 
 body main .menu button {
