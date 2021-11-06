@@ -139,6 +139,8 @@ body main .menu ul li {
 }
 
 body main .menu ul .card_plat {
+  position: relative;
+  height: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,6 +160,124 @@ body main .menu ul .card_plat {
   padding: 1rem;
   -webkit-box-shadow: 1px 1px 10px #cecaca;
           box-shadow: 1px 1px 10px #cecaca;
+}
+
+body main .menu ul .card_plat:nth-child(1) {
+  -webkit-animation: "liPop" 0.5s ease-in;
+          animation: "liPop" 0.5s ease-in;
+}
+
+body main .menu ul .card_plat:nth-child(2) {
+  -webkit-animation: "liPop" 1s ease-in;
+          animation: "liPop" 1s ease-in;
+}
+
+body main .menu ul .card_plat:nth-child(3) {
+  -webkit-animation: "liPop" 1.5s ease-in;
+          animation: "liPop" 1.5s ease-in;
+}
+
+body main .menu ul .card_plat:nth-child(4) {
+  -webkit-animation: "liPop" 2s ease-in;
+          animation: "liPop" 2s ease-in;
+}
+
+@-webkit-keyframes liPop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 2rem);
+            transform: translate(0, 2rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes liPop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 2rem);
+            transform: translate(0, 2rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body main .menu ul .card_plat .nom_plat {
+  overflow: hidden;
+}
+
+body main .menu ul .card_plat .nom_plat p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body main .menu ul .card_plat .prix {
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  position: absolute;
+  right: 5rem;
+}
+
+body main .menu ul .card_plat::after {
+  content: "";
+  display: block;
+  width: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  border-radius: 0 1rem 1rem 0;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+body main .menu ul .card_plat:hover::after {
+  width: 4rem;
+}
+
+body main .menu ul .card_plat:hover .prix {
+  margin-right: 2rem;
+}
+
+body main .menu ul .card_plat:hover .fas {
+  -webkit-animation: rotate-center 0.4s ease-in;
+          animation: rotate-center 0.4s ease-in;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: translateX(3rem) rotate(0);
+            transform: translateX(3rem) rotate(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(360deg);
+            transform: translateX(0) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: translateX(3rem) rotate(0);
+            transform: translateX(3rem) rotate(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(360deg);
+            transform: translateX(0) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+body main .menu ul .card_plat .fas {
+  margin-right: 4px;
+  color: #fff;
+  font-size: 1.5rem;
+  z-index: 1;
 }
 
 body main .menu button {

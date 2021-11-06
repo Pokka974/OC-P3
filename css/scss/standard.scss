@@ -32,3 +32,10 @@ $breakpoints: (
     align-items: $align;
 }
 
+@mixin animation($name:"all", $max:3) {
+    @for $i from 1 through $max {
+      &:nth-child(#{$i}) {
+        animation: $name #{$i * 0.5}s ease-in;
+      }
+    }
+}
