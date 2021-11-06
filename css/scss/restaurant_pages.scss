@@ -89,6 +89,7 @@ body{
                    
                 }
                 .card_plat{
+                    cursor: pointer;
                     position: relative;
                     height: 2.5rem;
                     @include flex(row, space-between);

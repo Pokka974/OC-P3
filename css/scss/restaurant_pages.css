@@ -157,6 +157,7 @@ body main .menu ul li {
 }
 
 body main .menu ul .card_plat {
+  cursor: pointer;
   position: relative;
   height: 2.5rem;
   display: -webkit-box;
