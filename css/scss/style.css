@@ -1,8 +1,8 @@
 body {
   max-width: 1440px;
   font-family: Roboto, sans-serif;
-  -webkit-animation: overflowBody 0.3s ease forwards 3s;
-          animation: overflowBody 0.3s ease forwards 3s;
+  -webkit-animation: overflowBody 0.3s ease forwards 1s;
+          animation: overflowBody 0.3s ease forwards 1s;
   overflow: hidden;
 }
 
@@ -40,8 +40,8 @@ body .loader-container {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  -webkit-animation: loaderBG 0.3s ease-in forwards 3s;
-          animation: loaderBG 0.3s ease-in forwards 3s;
+  -webkit-animation: loaderBG 0.3s ease-in forwards 1s;
+          animation: loaderBG 0.3s ease-in forwards 1s;
   width: 100vw;
   max-width: 1440px;
   height: 100vh;
@@ -357,7 +357,7 @@ body main .card .isNotNew {
   display: none;
 }
 
-body main .card span {
+body main .card .new {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -430,7 +430,25 @@ body main .card .card-description .card-text p {
   font-weight: lighter;
 }
 
-body main .card .card-description .fa-heart {
+body main .card .card-description .fas {
+  font-size: 1.5rem;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  opacity: 0;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+body main .card .card-description .fas:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body main .card .card-description .far {
   font-size: 1.5rem;
 }
 

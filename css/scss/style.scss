@@ -3,7 +3,7 @@
 body{
     max-width: 1440px;
     font-family: $text_font;
-    animation: overflowBody 0.3s ease forwards 3s;
+    animation: overflowBody 0.3s ease forwards 1s;
     @keyframes overflowBody{
         from{
             overflow: hidden;
@@ -17,7 +17,7 @@ body{
         position: absolute;
         @include flex;
         z-index: 1;
-        animation: loaderBG 0.3s ease-in forwards 3s;
+        animation: loaderBG 0.3s ease-in forwards 1s;
         width: 100vw;
         max-width: 1440px;
         height: 100vh;
@@ -172,7 +172,7 @@ body{
             .isNotNew{
                 display: none;
             }
-            span{
+            .new{
                 position: absolute;
                 right: 1rem;
                 top: 1rem;
@@ -207,10 +207,23 @@ body{
                         font-weight: lighter;
                     }
                 }
-                .fa-heart{
+                
+                .fas{
+                    font-size: 1.5rem;
+                    color: transparent;
+                    background-image: linear-gradient($secondary, $primary);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    opacity: 0;
+                    transition: all 150ms ease-in-out;
+                    &:hover{
+                        opacity: 1;
+                        transform: scale(1.2);
+                    }
+                }
+                .far{
                     font-size: 1.5rem;
                 }
-                
             }
         }
     }
