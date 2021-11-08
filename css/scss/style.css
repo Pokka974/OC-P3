@@ -40,12 +40,13 @@ body .loader-container {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  -webkit-animation: loaderBG 0.3s ease-in forwards 1s;
-          animation: loaderBG 0.3s ease-in forwards 1s;
+  -webkit-animation: loaderBG 0.3s ease-in forwards 1.5s;
+          animation: loaderBG 0.3s ease-in forwards 1.5s;
   width: 100vw;
   max-width: 1440px;
   height: 100vh;
   background-color: #fff;
+  opacity: 0.9;
 }
 
 body .loader-container .lds-dual-ring {
@@ -191,7 +192,6 @@ body .reservation_btn button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #9356dc;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   cursor: pointer;
@@ -200,8 +200,8 @@ body .reservation_btn button {
   height: 3rem;
   padding: 1rem;
   color: #fff;
-  -webkit-box-shadow: 2px 4px 10px #6d6b6b;
-          box-shadow: 2px 4px 10px #6d6b6b;
+  -webkit-box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.58);
+          box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.58);
   margin: 1rem 0 1.5rem 0;
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;
@@ -212,8 +212,10 @@ body .reservation_btn button {
 body .reservation_btn button:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  -webkit-box-shadow: 3px 6px 10px #6d6b6b;
-          box-shadow: 3px 6px 10px #6d6b6b;
+  -webkit-box-shadow: 0px 13px 34px -5px rgba(0, 0, 0, 0.85);
+          box-shadow: 0px 13px 34px -5px rgba(0, 0, 0, 0.85);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.8)), to(rgba(255, 121, 218, 0.8)));
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
 }
 
 body nav {

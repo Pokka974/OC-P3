@@ -326,7 +326,7 @@ body main .menu ul .card_plat .nom_plat .descr-prix .prix {
 }
 
 body main .menu button {
-  width: 15rem;
+  width: 10rem;
   background: #9356dc;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
@@ -336,8 +336,8 @@ body main .menu button {
   height: 3rem;
   padding: 1rem;
   color: #fff;
-  -webkit-box-shadow: 1px 2px 5px #6d6b6b;
-          box-shadow: 1px 2px 5px #6d6b6b;
+  -webkit-box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.58);
+          box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.58);
   margin: 1rem 0 1.5rem 0;
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;
@@ -348,8 +348,10 @@ body main .menu button {
 body main .menu button:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  -webkit-box-shadow: 3px 6px 10px #6d6b6b;
-          box-shadow: 3px 6px 10px #6d6b6b;
+  -webkit-box-shadow: 0px 13px 34px -5px rgba(0, 0, 0, 0.85);
+          box-shadow: 0px 13px 34px -5px rgba(0, 0, 0, 0.85);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.8)), to(rgba(255, 121, 218, 0.8)));
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
 }
 
 body footer {
