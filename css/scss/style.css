@@ -504,4 +504,8 @@ body footer ul a li {
   margin-top: 0.2rem;
   gap: 1rem;
 }
+
+body footer ul address {
+  font-style: normal;
+}
 /*# sourceMappingURL=style.css.map */
