@@ -104,32 +104,84 @@ body main .menu .main-head {
 
 body main .menu .main-head h2 {
   font-family: Shrikhand, sans-serif;
-  font-size: 300;
 }
 
-body main .menu .main-head .fas {
+body main .menu .main-head .far {
+  position: relative;
   font-size: 1.5rem;
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: default;
+}
+
+body main .menu .main-head .far .fas {
+  font-size: 1.5rem;
+  -webkit-transition: height 0.5s ease-in 0s, -webkit-transform 0.5s ease 0.5s;
+  transition: height 0.5s ease-in 0s, -webkit-transform 0.5s ease 0.5s;
+  transition: height 0.5s ease-in 0s, transform 0.5s ease 0.5s;
+  transition: height 0.5s ease-in 0s, transform 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  opacity: 0;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
+  height: 0;
 }
 
-body main .menu .main-head .fas:hover {
-  opacity: 1;
+body main .menu .main-head .far:hover .fas {
+  height: 100%;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-body main .menu .main-head .far {
-  font-size: 1.5rem;
+body main .menu .main-head .far:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-body main .menu ul {
+body main .menu .section-menu {
+  width: 100%;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  body main .menu .section-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+body main .menu .section-menu span {
+  border-bottom: 2px solid #99E2D0;
+}
+
+body main .menu .section-menu li {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+  body main .menu .section-menu li {
+    width: 40%;
+  }
+}
+
+body main .menu .section-menu .inside-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,26 +189,17 @@ body main .menu ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  margin: 2rem;
   gap: 1rem;
-  padding: 1rem 0;
 }
 
-body main .menu ul span {
-  border-bottom: 2px solid #99E2D0;
-}
-
-body main .menu ul li {
-  width: 100%;
-}
-
-body main .menu ul .card_plat {
+body main .menu .section-menu .inside-menu .card_plat {
   cursor: pointer;
   position: relative;
   height: 2.5rem;
@@ -181,24 +224,24 @@ body main .menu ul .card_plat {
           box-shadow: 1px 1px 10px #cecaca;
 }
 
-body main .menu ul .card_plat:nth-child(1) {
-  -webkit-animation: "liPop" 0.5s ease-in;
-          animation: "liPop" 0.5s ease-in;
+body main .menu .section-menu .inside-menu .card_plat:nth-child(1) {
+  -webkit-animation: liPop 0.5s ease-out;
+          animation: liPop 0.5s ease-out;
 }
 
-body main .menu ul .card_plat:nth-child(2) {
-  -webkit-animation: "liPop" 1s ease-in;
-          animation: "liPop" 1s ease-in;
+body main .menu .section-menu .inside-menu .card_plat:nth-child(2) {
+  -webkit-animation: liPop 1s ease-out;
+          animation: liPop 1s ease-out;
 }
 
-body main .menu ul .card_plat:nth-child(3) {
-  -webkit-animation: "liPop" 1.5s ease-in;
-          animation: "liPop" 1.5s ease-in;
+body main .menu .section-menu .inside-menu .card_plat:nth-child(3) {
+  -webkit-animation: liPop 1.5s ease-out;
+          animation: liPop 1.5s ease-out;
 }
 
-body main .menu ul .card_plat:nth-child(4) {
-  -webkit-animation: "liPop" 2s ease-in;
-          animation: "liPop" 2s ease-in;
+body main .menu .section-menu .inside-menu .card_plat:nth-child(4) {
+  -webkit-animation: liPop 2s ease-out;
+          animation: liPop 2s ease-out;
 }
 
 @-webkit-keyframes liPop {
@@ -223,7 +266,7 @@ body main .menu ul .card_plat:nth-child(4) {
   }
 }
 
-body main .menu ul .card_plat::after {
+body main .menu .section-menu .inside-menu .card_plat::after {
   content: "";
   display: block;
   width: 0;
@@ -232,17 +275,17 @@ body main .menu ul .card_plat::after {
   position: absolute;
   right: 0;
   border-radius: 0 1rem 1rem 0;
-  -webkit-transition: all 0.6s ease-in;
-  transition: all 0.6s ease-in;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-body main .menu ul .card_plat:hover::after {
+body main .menu .section-menu .inside-menu .card_plat:hover::after {
   width: 4rem;
 }
 
-body main .menu ul .card_plat:hover .fas {
-  -webkit-animation: rotate-center 0.6s ease-in forwards;
-          animation: rotate-center 0.6s ease-in forwards;
+body main .menu .section-menu .inside-menu .card_plat:hover .fas {
+  -webkit-animation: rotate-center 1s ease forwards;
+          animation: rotate-center 1s ease forwards;
 }
 
 @-webkit-keyframes rotate-center {
@@ -273,11 +316,11 @@ body main .menu ul .card_plat:hover .fas {
   }
 }
 
-body main .menu ul .card_plat:hover .prix {
+body main .menu .section-menu .inside-menu .card_plat:hover .prix {
   margin-right: 4rem;
 }
 
-body main .menu ul .card_plat .fa-check-circle {
+body main .menu .section-menu .inside-menu .card_plat .fa-check-circle {
   margin-right: 4px;
   color: #fff;
   font-size: 1.5rem;
@@ -287,18 +330,18 @@ body main .menu ul .card_plat .fa-check-circle {
   visibility: hidden;
 }
 
-body main .menu ul .card_plat .nom_plat {
+body main .menu .section-menu .inside-menu .card_plat .nom_plat {
   overflow: hidden;
   width: 100%;
 }
 
-body main .menu ul .card_plat .nom_plat h3 {
+body main .menu .section-menu .inside-menu .card_plat .nom_plat h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-body main .menu ul .card_plat .nom_plat .descr-prix {
+body main .menu .section-menu .inside-menu .card_plat .nom_plat .descr-prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,13 +357,13 @@ body main .menu ul .card_plat .nom_plat .descr-prix {
           align-items: center;
 }
 
-body main .menu ul .card_plat .nom_plat .descr-prix p:nth-child(1) {
+body main .menu .section-menu .inside-menu .card_plat .nom_plat .descr-prix p:nth-child(1) {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-body main .menu ul .card_plat .nom_plat .descr-prix .prix {
+body main .menu .section-menu .inside-menu .card_plat .nom_plat .descr-prix .prix {
   -webkit-transition: all 0.6s ease-in;
   transition: all 0.6s ease-in;
 }
@@ -380,14 +423,13 @@ body footer ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 0.5rem;
 }
 
-body footer ul a {
-  color: #fff;
+body footer ul li {
+  margin-top: 0.2rem;
 }
 
-body footer ul a li {
+body footer ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,11 +443,7 @@ body footer ul a li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.2rem;
   gap: 1rem;
-}
-
-body footer ul address {
-  font-style: normal;
+  color: #fff;
 }
 /*# sourceMappingURL=restaurant_pages.css.map */

@@ -1,25 +1,19 @@
 body {
   max-width: 1440px;
   font-family: Roboto, sans-serif;
-  -webkit-animation: overflowBody 0.3s ease forwards 1s;
-          animation: overflowBody 0.3s ease forwards 1s;
+  -webkit-animation: overflowBody 0.3s ease forwards 1.5s;
+          animation: overflowBody 0.3s ease forwards 1.5s;
   overflow: hidden;
 }
 
 @-webkit-keyframes overflowBody {
-  from {
-    overflow: hidden;
-  }
-  to {
+  100% {
     overflow: scroll;
   }
 }
 
 @keyframes overflowBody {
-  from {
-    overflow: hidden;
-  }
-  to {
+  100% {
     overflow: scroll;
   }
 }
@@ -203,10 +197,10 @@ body .reservation_btn button {
   -webkit-box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.58);
           box-shadow: 0px 13px 25px -9px rgba(0, 0, 0, 0.58);
   margin: 1rem 0 1.5rem 0;
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
 body .reservation_btn button:hover {
@@ -243,6 +237,22 @@ body nav ul {
 body nav ul li {
   position: relative;
   height: 4.5rem;
+  background-color: #f6f6f6;
+  border-radius: 1rem;
+  -webkit-box-shadow: 1px 2px 5px #e7e2e2;
+          box-shadow: 1px 2px 5px #e7e2e2;
+  padding-left: 2.5rem;
+}
+
+body nav ul li:hover {
+  background-color: #f5edff;
+}
+
+body nav ul li:hover i {
+  color: #9356DC;
+}
+
+body nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,19 +266,12 @@ body nav ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.5rem;
-  background-color: #f6f6f6;
-  border-radius: 1rem;
-  -webkit-box-shadow: 1px 2px 5px #e7e2e2;
-          box-shadow: 1px 2px 5px #e7e2e2;
-  padding-left: 2.5rem;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
 }
 
-body nav ul li:hover {
-  background-color: #f5edff;
-}
-
-body nav ul li span {
+body nav ul li a span {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,7 +295,7 @@ body nav ul li span {
   font-size: 0.8rem;
 }
 
-body nav ul li i {
+body nav ul li a i {
   font-size: 1.2rem;
   color: #918a8a;
 }
@@ -319,6 +322,21 @@ body main {
 @media only screen and (min-width: 1248px) {
   body main {
     max-width: 1440px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -326,9 +344,16 @@ body main h2 {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-bottom: 0.5rem;
+  width: 100%;
 }
 
-body main .card {
+@media only screen and (min-width: 1248px) {
+  body main .linkCard {
+    width: 40%;
+  }
+}
+
+body main .linkCard .card {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,16 +375,16 @@ body main .card {
 }
 
 @media only screen and (min-width: 1248px) {
-  body main .card {
+  body main .linkCard .card {
     max-width: 1400px;
   }
 }
 
-body main .card .isNotNew {
+body main .linkCard .card .isNotNew {
   display: none;
 }
 
-body main .card .new {
+body main .linkCard .card .new {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -369,11 +394,12 @@ body main .card .new {
   color: #008766;
 }
 
-body main .card figure {
+body main .linkCard .card figure {
   margin: 0;
+  width: 100%;
 }
 
-body main .card figure img {
+body main .linkCard .card figure img {
   width: 90vw;
   height: 12rem;
   -o-object-fit: cover;
@@ -382,12 +408,13 @@ body main .card figure img {
 }
 
 @media only screen and (min-width: 1248px) {
-  body main .card figure img {
+  body main .linkCard .card figure img {
     max-width: 1400px;
+    width: 100%;
   }
 }
 
-body main .card .card-description {
+body main .linkCard .card .card-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,12 +433,13 @@ body main .card .card-description {
 }
 
 @media only screen and (min-width: 1248px) {
-  body main .card .card-description {
+  body main .linkCard .card .card-description {
     max-width: 1350px;
+    width: 95%;
   }
 }
 
-body main .card .card-description .card-text {
+body main .linkCard .card .card-description .card-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,30 +456,43 @@ body main .card .card-description .card-text {
   gap: 0.2rem;
 }
 
-body main .card .card-description .card-text p {
+body main .linkCard .card .card-description .card-text p {
   font-weight: lighter;
 }
 
-body main .card .card-description .fas {
+body main .linkCard .card .card-description .far {
+  position: relative;
   font-size: 1.5rem;
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: default;
+}
+
+body main .linkCard .card .card-description .far .fas {
+  font-size: 1.5rem;
+  -webkit-transition: height 0.5s ease-in 0s, -webkit-transform 0.5s ease 0.5s;
+  transition: height 0.5s ease-in 0s, -webkit-transform 0.5s ease 0.5s;
+  transition: height 0.5s ease-in 0s, transform 0.5s ease 0.5s;
+  transition: height 0.5s ease-in 0s, transform 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  opacity: 0;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
+  height: 0;
 }
 
-body main .card .card-description .fas:hover {
-  opacity: 1;
+body main .linkCard .card .card-description .far:hover .fas {
+  height: 100%;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-body main .card .card-description .far {
-  font-size: 1.5rem;
+body main .linkCard .card .card-description .far:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 body footer {
@@ -480,14 +521,13 @@ body footer ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 0.5rem;
 }
 
-body footer ul a {
-  color: #fff;
+body footer ul li {
+  margin-top: 0.2rem;
 }
 
-body footer ul a li {
+body footer ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,11 +541,7 @@ body footer ul a li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 0.2rem;
   gap: 1rem;
-}
-
-body footer ul address {
-  font-style: normal;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

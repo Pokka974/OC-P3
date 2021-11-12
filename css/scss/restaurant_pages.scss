@@ -56,120 +56,138 @@ body{
                 gap: 5rem;
                 h2{
                     font-family: $font_head;
-                    font-size: 300;
-                }
-                .fas{
-                    font-size: 1.5rem;
-                    color: transparent;
-                    background-image: linear-gradient($secondary, $primary);
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                    opacity: 0;
-                    transition: all 150ms ease-in-out;
-                    &:hover{
-                        opacity: 1;
-                        transform: scale(1.2);
-                    }
                 }
                 .far{
+                    position: relative;
                     font-size: 1.5rem;
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    cursor: default;
+                    .fas{
+                        font-size: 1.5rem;
+                        transition: height 0.5s ease-in 0s, transform 0.5s ease 0.5s;
+                        color: transparent;
+                        background-image: linear-gradient($secondary, $primary);
+                        -webkit-background-clip: text;
+                        height: 0;
+                    }
+                    &:hover .fas{
+                        height: 100%;
+                        transform: scale(1.2);
+                    }
+                    &:hover{
+                        background-image: linear-gradient($secondary, $primary);
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
                 }
             }
-            
-            ul{
-                @include flex(column);
+            .section-menu{
+                @include mq('desktop'){
+                    @include flex(row, space-evenly, flex-start);
+                    flex-wrap: wrap;
+                }
                 width: 100%;
-                gap: 1rem;
+                gap: 2rem;
                 padding: 1rem 0;
                 span{
                     border-bottom: 2px solid $tertiary;
                 }
                 li{
                     width: 100%;
-                   
+                   @include mq('desktop'){
+                       width: 40%;
+                   }
                 }
-                .card_plat{
-                    cursor: pointer;
-                    position: relative;
-                    height: 2.5rem;
-                    @include flex(row, space-between);
-                    width: 95%;
-                    background-color: #fff;
-                    border-radius: 1rem;
-                    padding: 1rem;
-                    box-shadow: 1px 1px 10px #cecaca;
-                    @include animation("liPop",4);
-                    @keyframes liPop {
-                        0%{
-                            opacity: 0;
-                            transform: translate(0, 2rem);
-                        }
-                        100%{
-                            opacity: 1;
-                        }
-                    }
-                    &::after{
-                        content: "";
-                        display: block;
-                        width: 0;
-                        background-color: $tertiary;
-                        height: 100%;
-                        position: absolute;
-                        right: 0;
-                        border-radius: 0 1rem 1rem 0;
-                        transition: all 0.6s ease-in;
-                    }
-                    &:hover::after{
-                        width: 4rem;
-                    }
-                   
-                    &:hover .fas{
-                        animation: rotate-center 0.6s ease-in forwards;
-                        @keyframes rotate-center {
-                            0% {
-                                      transform: translateX(3rem) rotate(0);
-                                      opacity: 0;
+                .inside-menu{
+                    @include flex(column, space-between, center);
+                    margin: 2rem;
+                    gap: 1rem;
+                    .card_plat{
+                        cursor: pointer;
+                        position: relative;
+                        height: 2.5rem;
+                        @include flex(row, space-between);
+                        width: 95%;
+                        background-color: #fff;
+                        border-radius: 1rem;
+                        padding: 1rem;
+                        box-shadow: 1px 1px 10px #cecaca;
+                        @include animation(liPop, 4);
+                        @keyframes liPop {
+                            0%{
+                                opacity: 0;
+                                transform: translate(0, 2rem);
                             }
-                            100% {
-                                      transform: translateX(0) rotate(360deg);
-                                      opacity: 1;
-                                      visibility: visible;
+                            100%{
+                                opacity: 1;
                             }
-                          }
-                    }
-                    &:hover .prix{
-                        margin-right: 4rem;
-                    }
-                    .fa-check-circle{
-                        margin-right: 4px;
-                        color: #fff;
-                        font-size: 1.5rem;
-                        z-index: 1;
-                        position: absolute;
-                        right: 1rem;
-                        visibility: hidden;
-                    }
-                    .nom_plat{
-                        overflow: hidden;
-                        width: 100%;
-                        h3{
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
+                        }
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: 0;
+                            background-color: $tertiary;
+                            height: 100%;
+                            position: absolute;
+                            right: 0;
+                            border-radius: 0 1rem 1rem 0;
+                            transition: all 1s ease;
+                        }
+                        &:hover::after{
+                            width: 4rem;
+                        }
+                       
+                        &:hover .fas{
+                            animation: rotate-center 1s ease forwards;
+                            @keyframes rotate-center {
+                                0% {
+                                          transform: translateX(3rem) rotate(0);
+                                          opacity: 0;
+                                }
+                                100% {
+                                          transform: translateX(0) rotate(360deg);
+                                          opacity: 1;
+                                          visibility: visible;
+                                }
+                              }
+                        }
+                        &:hover .prix{
+                            margin-right: 4rem;
+                        }
+                        .fa-check-circle{
+                            margin-right: 4px;
+                            color: #fff;
+                            font-size: 1.5rem;
+                            z-index: 1;
+                            position: absolute;
+                            right: 1rem;
+                            visibility: hidden;
+                        }
+                        .nom_plat{
                             overflow: hidden;
-                        }
-                        .descr-prix{
-                            @include flex(row, space-between, center);
-                            p:nth-child(1){
+                            width: 100%;
+                            h3{
                                 text-overflow: ellipsis;
                                 white-space: nowrap;
                                 overflow: hidden;
                             }
-                            .prix{
-                                transition: all 0.6s ease-in;
+                            .descr-prix{
+                                @include flex(row, space-between, center);
+                                p:nth-child(1){
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+                                .prix{
+                                    transition: all 0.6s ease-in;
+                                }
                             }
                         }
                     }
                 }
+                
             }
             button{
                 width: 10rem;
@@ -203,17 +221,13 @@ body{
         }
         ul{
             @include flex(column, center, flex-start);
-            gap: 0.5rem;
-            a{
-                color: #fff;
-                li{
+            li{
+                margin-top: 0.2rem;
+                a{
                     @include flex(row, flex-start, center);
-                    margin-top: 0.2rem;
                     gap: 1rem;
+                    color: #fff;
                 }
-            }
-            address{
-                font-style: normal;
             }
         }
     }
