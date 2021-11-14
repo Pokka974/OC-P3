@@ -68,9 +68,7 @@ body{
     header{
         h1{
             font-family: $font_head;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex;
             margin: 1rem 0;
         }
     }
@@ -181,7 +179,7 @@ body{
                 border-radius: 1rem;
                 box-shadow: 1px 2px 10px #6d6b6b;
                 @include mq('desktop'){
-                    max-width: 1400px;
+                    // max-width: 1400px;
                 }
                 .isNotNew{
                     display: none;
@@ -204,7 +202,7 @@ body{
                         object-fit: cover;
                         border-radius: 1rem 1rem 0 0;
                         @include mq('desktop'){
-                            max-width: 1400px;
+                            // max-width: 1400px;
                             width: 100%;
                         }
                     }
@@ -214,7 +212,7 @@ body{
                     width: 80vw;
                     padding: 0.8rem;
                     @include mq('desktop'){
-                        max-width: 1350px;
+                        // max-width: 1350px;
                         width: 95%;
                     }
                     .card-text{

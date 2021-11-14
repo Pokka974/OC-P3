@@ -44,7 +44,7 @@ body{
         .menu{
             @include flex(column, initial, center);
             max-width: 1440px;
-            width: calc(100% - 2rem);
+            // width: calc(100% - 2rem);
             top: 20rem;
             background-color: $lightgrey;
             border-radius: 2rem 2rem 0 0;
@@ -144,11 +144,11 @@ body{
                             @keyframes rotate-center {
                                 0% {
                                           transform: translateX(3rem) rotate(0);
-                                          opacity: 0;
+                                        //   opacity: 0;
                                 }
                                 100% {
                                           transform: translateX(0) rotate(360deg);
-                                          opacity: 1;
+                                        //   opacity: 1;
                                           visibility: visible;
                                 }
                               }
