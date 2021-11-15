@@ -291,10 +291,12 @@ body main .menu .section-menu .inside-menu .card_plat:hover .fas {
   0% {
     -webkit-transform: translateX(3rem) rotate(0);
             transform: translateX(3rem) rotate(0);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0) rotate(360deg);
             transform: translateX(0) rotate(360deg);
+    opacity: 1;
     visibility: visible;
   }
 }
@@ -303,10 +305,12 @@ body main .menu .section-menu .inside-menu .card_plat:hover .fas {
   0% {
     -webkit-transform: translateX(3rem) rotate(0);
             transform: translateX(3rem) rotate(0);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0) rotate(360deg);
             transform: translateX(0) rotate(360deg);
+    opacity: 1;
     visibility: visible;
   }
 }
